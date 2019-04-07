@@ -1,0 +1,6 @@
+﻿#name_info, #email_info, #phone_info {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 3px solid red;
+}

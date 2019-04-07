@@ -1,0 +1,293 @@
+﻿
+@{
+    ViewBag.Title = "Chọn Ghế";
+}
+<div class="banner-bottom">
+    <!-- container -->
+    <div class="container">
+        <div class="faqs-top-grids">
+            <!--single-page-->
+            <div class="single-page">
+                <div class="col-md-12 single-gd-lt">
+                    <div class="col-md-4 book-left">
+                        <div class="card" style="border: 1px solid rgb(197, 197, 197);border-radius: 5px;padding: 20px;">
+                            <div class="card-body">
+                                <h5 class="card-title">QUI NHƠN - TP.HỒ CHÍ MINH NGÀY 08-04-2019</h5>
+                                <div class="form-group">
+                                    <label for="route" class="col-form-label">Chọn tuyến xe</label>
+                                    <input type="text" class="form-control" id="route" value="Qui Nhơn => BX Miền Đông" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tel" class="col-form-label">Chọn giờ khởi hành</label>
+                                    <select (change)="onChange($event.target.value)">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <a href="/#/routingTicket">
+                                        <button class="btn btn-sm">
+                                            <i class="glyphicon glyphicon-backward"></i> Quay lại
+                                        </button>
+                                    </a>
+                                    <span style="margin: 0 3px;"></span>
+                                    <button class="btn btn-sm" onclick="location.href='@Url.Action("InfoCustomer", "Home")';">
+                                        <i class="glyphicon glyphicon-forward"></i> Tiếp tục
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span style="margin: 5px;"></span>
+                        <div class="card" style="border: 1px solid rgb(197, 197, 197);border-radius: 5px;padding: 20px;">
+                            <div class="card-body">
+                                <h5 class="card-title">THÔNG TIN CHUYẾN</h5>
+                                <ul class="timeline">
+                                    <li>
+                                        <a>Xuất Phát</a>
+                                        <a class="float-right"> 08-04-2019 17:00</a>
+                                        <p>Qui Nhơn</p>
+                                    </li>
+                                    <li>
+                                        <a>Điểm đến</a>
+                                        <a class="float-right"></a>
+                                        <p>TP.Hôf Chí Minh BX Miền Đông</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card" style="border: 1px solid rgb(197, 197, 197);border-radius: 5px;padding: 20px;">
+                            <div class="card-body">
+                                <h5 class="card-title">SỐ GHẾ: Chưa chọn ghế</h5>
+                                <hr />
+                                <div class="single-gd-lt">
+                                    <div class="single-pg-hdr">
+                                        <div id="holder">
+                                            <ul id="place"></ul>
+                                        </div>
+                                        <div style="float:left;">
+                                            <ul id="seatDescription">
+                                                <li style="background:url('/Content/images/available_seat.png') no-repeat scroll 0 0 transparent;">Available Seat</li>
+                                                <li style="background:url('/Content/images/booked_seat.png') no-repeat scroll 0 0 transparent;">Booked Seat</li>
+                                                <li style="background:url('/Content/images/selected_seat.png') no-repeat scroll 0 0 transparent;">Selected Seat</li>
+                                            </ul>
+                                        </div>
+                                        <div style="clear:both;width:100%">
+                                            <input type="button" id="btnShowNew" value="Show Selected Seats" />
+                                            <input type="button" id="btnShow" value="Show All" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!--//single-page-->
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<div class="footer">
+    <!-- container -->
+    <div class="container">
+        <div class="footer-top-grids">
+            <div class="footer-grids">
+                <div class="col-md-3 footer-grid">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="index.html">Flight Schedule</a></li>
+                        <li><a href="flights-hotels.html">City Airline Routes</a></li>
+                        <li><a href="index.html">International Flights</a></li>
+                        <li><a href="hotels.html">International Hotels</a></li>
+                        <li><a href="bus.html">Bus Booking</a></li>
+                        <li><a href="index.html">Domestic Airlines</a></li>
+                        <li><a href="holidays.html">Holidays Trip</a></li>
+                        <li><a href="hotels.html">Hotel Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy </a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="booking.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h4>Travel Resources</h4>
+                    <ul>
+                        <li><a href="holidays.html">Holidays Packages</a></li>
+                        <li><a href="weekend.html">Weekend Getaways</a></li>
+                        <li><a href="index.html">International Airports</a></li>
+                        <li><a href="index.html">Domestic Flights Booking</a></li>
+                        <li><a href="booking.html">Customer Support</a></li>
+                        <li><a href="booking.html">Cancel Bookings</a></li>
+                        <li><a href="booking.html">Print E-tickets</a></li>
+                        <li><a href="booking.html">Customer Forums</a></li>
+                        <li><a href="booking.html">Make a Payment</a></li>
+                        <li><a href="booking.html">Complete Booking</a></li>
+                        <li><a href="booking.html">Assurance Claim</a></li>
+                        <li><a href="booking.html">Retail Offices</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h4>More Links</h4>
+                    <ul class="chf_footer_list">
+                        <li><a href="#">Flights Discount Coupons</a></li>
+                        <li><a href="#">Domestic Airlines</a></li>
+                        <li><a href="#">Indigo Airlines</a></li>
+                        <li><a href="#">Air Asia</a></li>
+                        <li><a href="#">Jet Airways</a></li>
+                        <li><a href="#">SpiceJet</a></li>
+                        <li><a href="#">GoAir</a></li>
+                        <li><a href="#">Air India</a></li>
+                        <li><a href="#">Domestic Flight Routes</a></li>
+                        <li><a href="#">Indian City Flight</a></li>
+                        <li><a href="#">Flight Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- news-letter -->
+            <div class="news-letter">
+                <div class="news-letter-grids">
+                    <div class="col-md-4 news-letter-grid">
+                        <p>Toll Free No : <span>1234-5678-901</span></p>
+                    </div>
+                    <div class="col-md-4 news-letter-grid">
+                        <p class="mail">Email : <a href="mailto:info@example.com">mail@example.com</a></p>
+                    </div>
+                    <div class="col-md-4 news-letter-grid">
+                        <form>
+                            <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <!-- //news-letter -->
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //footer -->
+<div class="footer-bottom-grids">
+    <!-- container -->
+    <div class="container">
+        <div class="footer-bottom-top-grids">
+            <div class="col-md-4 footer-bottom-left">
+                <h4>Download our mobile Apps</h4>
+                <div class="d-apps">
+                    <ul>
+                        <li><a href="#"><img src="~/Content/images/app1.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/Content/images/app2.png" alt="" /></a></a></li>
+                        <li><a href="#"><img src="~/Content/images/app3.png" alt="" /></a></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 footer-bottom-left">
+                <h4>We Accept</h4>
+                <div class="a-cards">
+                    <ul>
+                        <li><a href="#"><img src="~/Content/images/c1.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/Content/images/c2.png" alt="" /></a></a></li>
+                        <li><a href="#"><img src="~/Content/images/c3.png" alt="" /></a></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 footer-bottom-left">
+                <h4>Follow Us</h4>
+                <div class="social">
+                    <ul>
+                        <li><a href="#" class="facebook"> </a></li>
+                        <li><a href="#" class="facebook twitter"> </a></li>
+                        <li><a href="#" class="facebook chrome"> </a></li>
+                        <li><a href="#" class="facebook dribbble"> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+            <div class="copyright">
+                <p>Copyrights © 2015 Govihar . Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+        var settings = {
+            rows: 5,
+            cols: 15,
+            rowCssPrefix: 'row-',
+            colCssPrefix: 'col-',
+            seatWidth: 35,
+            seatHeight: 35,
+            seatCss: 'seat',
+            selectedSeatCss: 'selectedSeat',
+            selectingSeatCss: 'selectingSeat'
+        };
+        var init = function (reservedSeat) {
+            var str = [], seatNo, className;
+            for (i = 0; i < settings.rows; i++) {
+                for (j = 0; j < settings.cols; j++) {
+                    seatNo = (i + j * settings.rows + 1);
+                    className = settings.seatCss + ' ' + settings.rowCssPrefix + i.toString() + ' ' + settings.colCssPrefix + j.toString();
+                    if ($.isArray(reservedSeat) && $.inArray(seatNo, reservedSeat) != -1) {
+                        className += ' ' + settings.selectedSeatCss;
+                    }
+                    str.push('<li class="' + className + '"' +
+                        'style="top:' + (i * settings.seatHeight).toString() + 'px;left:' + (j * settings.seatWidth).toString() + 'px">' +
+                        '<a title="' + seatNo + '">' + seatNo + '</a>' +
+                        '</li>');
+                }
+            }
+            $('#place').html(str.join(''));
+        };
+        //case I: Show from starting
+        //init();
+
+        //Case II: If already booked
+        var bookedSeats = [5, 10, 25];
+        init(bookedSeats);
+        $('.' + settings.seatCss).click(function () {
+            if ($(this).hasClass(settings.selectedSeatCss)) {
+                alert('This seat is already reserved');
+            }
+            else {
+                $(this).toggleClass(settings.selectingSeatCss);
+            }
+        });
+
+        $('#btnShow').click(function () {
+            var str = [];
+            $.each($('#place li.' + settings.selectedSeatCss + ' a, #place li.' + settings.selectingSeatCss + ' a'), function (index, value) {
+                str.push($(this).attr('title'));
+            });
+            alert(str.join(','));
+        })
+
+        $('#btnShowNew').click(function () {
+            var str = [], item;
+            $.each($('#place li.' + settings.selectingSeatCss + ' a'), function (index, value) {
+                item = $(this).attr('title');
+                str.push(item);
+            });
+            alert(str.join(','));
+        })
+    </script>
+}
