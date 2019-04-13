@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = "~/Views/Shared/_LayoutNoMenu.cshtml";
+}
+
+<div class="banner-bottom">
+    <!-- container -->
+    <div class="container">
+        <div class="faqs-top-grids">
+            <!--single-page-->
+            <div class="single-page">
+                <div class="col-md-12 single-gd-lt">
+                    <div class="col-md-6 book-left">
+                        <div class="card" style="border: 1px solid rgb(197, 197, 197);border-radius: 5px;padding: 20px;">
+                            <div class="card-body">
+                                <form method="post" action="@Url.Action("Authentication","Login")">
+                                    <h5 class="card-title" style="text-align:center;margin-bottom:30px;">TÔI ĐÃ ĐĂNG KÝ TÀI KHOẢN</h5>
+                                    <div class="form-group">
+                                        <label for="email" class="col-form-label">Tên đăng nhập *</label>
+                                        <input type="text" class="form-control" id="email" placeholder="Điền email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="col-form-label">Mật khẩu *</label>
+                                        <input type="text" class="form-control" id="password" placeholder="Điền mật khẩu">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="forgotpw">Quên mật khẩu?</label>
+                                        <input type="submit" value="Đăng nhập" style="padding: 2px 2px;background-color:orangered;">
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <span style="margin: 5px;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card" style="border: 1px solid rgb(197, 197, 197);border-radius: 5px;padding: 20px;">
+                            <div class="card-body">
+
+                                <form method="post" action="@Url.Action("SignUp","Home")">
+                                    <h5 class="card-title" style="text-align:center;margin-bottom:30px;">BẠN LÀ KHÁCH HÀNG MỚI</h5>
+                                    <div class="form-group">
+                                        <input type="submit" value="Đăng Ký" style="padding:5px 5px;background-color:forestgreen;color:white;">
+                                        <p>
+                                            Chỉ với 1 tài khoản BOT ID, tham gia được tất cả các chương trình của BOT Bus Lines
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!--//single-page-->
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<div class="footer">
+    <!-- container -->
+    <div class="container">
+        <div class="footer-top-grids">
+            <div class="footer-grids">
+                <div class="col-md-3 footer-grid">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="index.html">Flight Schedule</a></li>
+                        <li><a href="flights-hotels.html">City Airline Routes</a></li>
+                        <li><a href="index.html">International Flights</a></li>
+                        <li><a href="hotels.html">International Hotels</a></li>
+                        <li><a href="bus.html">Bus Booking</a></li>
+                        <li><a href="index.html">Domestic Airlines</a></li>
+                        <li><a href="holidays.html">Holidays Trip</a></li>
+                        <li><a href="hotels.html">Hotel Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy </a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="booking.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h4>Travel Resources</h4>
+                    <ul>
+                        <li><a href="holidays.html">Holidays Packages</a></li>
+                        <li><a href="weekend.html">Weekend Getaways</a></li>
+                        <li><a href="index.html">International Airports</a></li>
+                        <li><a href="index.html">Domestic Flights Booking</a></li>
+                        <li><a href="booking.html">Customer Support</a></li>
+                        <li><a href="booking.html">Cancel Bookings</a></li>
+                        <li><a href="booking.html">Print E-tickets</a></li>
+                        <li><a href="booking.html">Customer Forums</a></li>
+                        <li><a href="booking.html">Make a Payment</a></li>
+                        <li><a href="booking.html">Complete Booking</a></li>
+                        <li><a href="booking.html">Assurance Claim</a></li>
+                        <li><a href="booking.html">Retail Offices</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h4>More Links</h4>
+                    <ul class="chf_footer_list">
+                        <li><a href="#">Flights Discount Coupons</a></li>
+                        <li><a href="#">Domestic Airlines</a></li>
+                        <li><a href="#">Indigo Airlines</a></li>
+                        <li><a href="#">Air Asia</a></li>
+                        <li><a href="#">Jet Airways</a></li>
+                        <li><a href="#">SpiceJet</a></li>
+                        <li><a href="#">GoAir</a></li>
+                        <li><a href="#">Air India</a></li>
+                        <li><a href="#">Domestic Flight Routes</a></li>
+                        <li><a href="#">Indian City Flight</a></li>
+                        <li><a href="#">Flight Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- news-letter -->
+            <div class="news-letter">
+                <div class="news-letter-grids">
+                    <div class="col-md-4 news-letter-grid">
+                        <p>Toll Free No : <span>1234-5678-901</span></p>
+                    </div>
+                    <div class="col-md-4 news-letter-grid">
+                        <p class="mail">Email : <a href="mailto:info@example.com">mail@example.com</a></p>
+                    </div>
+                    <div class="col-md-4 news-letter-grid">
+                        <form>
+                            <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <!-- //news-letter -->
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //footer -->
+<div class="footer-bottom-grids">
+    <!-- container -->
+    <div class="container">
+        <div class="footer-bottom-top-grids">
+            <div class="col-md-4 footer-bottom-left">
+                <h4>Download our mobile Apps</h4>
+                <div class="d-apps">
+                    <ul>
+                        <li><a href="#"><img src="~/Content/images/app1.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/Content/images/app2.png" alt="" /></a></a></li>
+                        <li><a href="#"><img src="~/Content/images/app3.png" alt="" /></a></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 footer-bottom-left">
+                <h4>We Accept</h4>
+                <div class="a-cards">
+                    <ul>
+                        <li><a href="#"><img src="~/Content/images/c1.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/Content/images/c2.png" alt="" /></a></a></li>
+                        <li><a href="#"><img src="~/Content/images/c3.png" alt="" /></a></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 footer-bottom-left">
+                <h4>Follow Us</h4>
+                <div class="social">
+                    <ul>
+                        <li><a href="#" class="facebook"> </a></li>
+                        <li><a href="#" class="facebook twitter"> </a></li>
+                        <li><a href="#" class="facebook chrome"> </a></li>
+                        <li><a href="#" class="facebook dribbble"> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+            <div class="copyright">
+                <p>Copyrights © 2015 Govihar . Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
